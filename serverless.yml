@@ -1,0 +1,30 @@
+org: dk12345
+app: exabeam6
+service: exabeam6
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.8
+  lambdaHashingVersion: '20201221'
+
+  # you can overwrite defaults here
+  stage: dev
+  region: us-east-1
+
+functions:
+  hn_sentiment_analysis:
+    handler: handler.hn_sentiment_analysis
+    events:
+      - http:
+          path: /projects/hn_sentiment_analysis
+          method: get
+    timeout: 30
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
