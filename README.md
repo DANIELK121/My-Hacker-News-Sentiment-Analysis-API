@@ -1,14 +1,14 @@
 # Hacker News Sentiment Analysis API
 Welcome to Hacker News (HN) Sentiment Analysis API!
 
-Here you can query an API for a certain phrase, and get the sentiment of the comments users had to stories with that phrase in the title, on HN "top stories".
+Here you can query an API with a certain phrase and get a sentiment analysis of all comments users had to stories with that phrase in the title, from HN "top stories".
 Use this link: 
 
 https://ljk650ods9.execute-api.us-east-1.amazonaws.com/prod/projects/hn_sentiment_analysis?phrase=Epic%20Games
 
-to get the sentiment of the comments users had to stories with the phrase "Epic Games" in the title. Change the value of `phrase` to make your own search!
+to get the sentiment analysis of the comments users had to stories with "Epic Games" in the title. Change the value of `phrase` to make your own search!
 # Response
-The response will be aggregated statistics of the sentiment of the comments that had `phrase` in its headline.
+The response will be aggregated statistics of the sentiment analysis of comments to stories with `phrase` in title.
 
 e.g.
 
